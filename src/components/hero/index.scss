@@ -1,0 +1,20 @@
+.hero {
+    @apply container py-8 px-4;
+    @apply lg:py-16;
+    &__heading {
+        @apply font-medium text-[28px] leading-[40px];
+        @apply tracking-[-0.5px];
+        @apply lg:text-5xl lg:leading-[64px];
+        img {
+            @apply w-8 rounded-full inline-block;
+            @apply transition-all duration-200;
+            &:hover {
+                @apply transform scale-150;
+            }
+        }
+        a {
+            @apply underline decoration-1 underline-offset-[12px];
+            @apply hover:no-underline;
+        }
+    }
+}

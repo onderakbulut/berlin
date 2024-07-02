@@ -1,0 +1,25 @@
+.services {
+    @apply container mt-16 px-4;
+    @apply lg:mt-24;
+    &__inner {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+        @apply lg:gap-10;
+    }
+    &__title {
+        @apply mb-6 uppercase text-secondary-100 tracking-[1.6px];
+    }
+    &__list {
+        counter-reset: list-items;
+        li {
+            @apply py-6 border-t border-secondary-200 last:border-b text-xl;
+            @apply flex items-center;
+            &::before {
+                counter-increment: list-items;
+                content: counter(list-items);
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-fill-color: transparent;
+                @apply text-2xl font-medium pr-4;
+            }
+        }
+    }
+}

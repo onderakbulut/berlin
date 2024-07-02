@@ -1,0 +1,19 @@
+.clients {
+    @apply container mt-16 px-4;
+    @apply lg:mt-24;
+    &__title {
+        @apply mb-6 uppercase text-secondary-100 tracking-[1.6px];
+    }
+    &__content 
+    {
+        ul {
+            @apply flex flex-wrap gap-12 items-center justify-between py-8;
+            @apply border-y border-secondary-200;
+            li {
+                img {
+                    @apply max-h-6;
+                }
+            }
+        }
+    }
+}

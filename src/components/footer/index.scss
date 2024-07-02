@@ -1,0 +1,37 @@
+.footer {
+    @apply bg-light;
+    &__inner {
+        @apply container px-4 py-16;
+        @apply lg:py-24;
+    }
+    &__subscribe {
+        h2 {
+            @apply mb-6 uppercase text-secondary-100 tracking-[1.6px];
+        }
+        input {
+            box-shadow:0 2px 0 0 #000000;
+            @apply p-3 w-full bg-transparent;
+        }
+        button {
+            box-shadow:inset 0 0 0 2px #000000;
+            @apply px-6 py-4 rounded-[40px];
+            @apply text-xl hover:bg-black hover:text-white;
+        }
+    }
+    .social {
+        @apply mt-8 flex flex-wrap gap-8;
+        @apply lg:mt-16;
+        a {
+            @apply text-xl hover:bg-none;
+            @apply bg-work bg-size-full bg-left-bottom bg-no-repeat;     
+        }
+    }
+    &__copyright {
+        @apply text-secondary-100 text-xl mt-8;
+        @apply lg:mt-16;
+        a {
+            @apply bg-work bg-size-full bg-left-bottom bg-no-repeat;     
+            @apply hover:bg-none;
+        }
+    }
+}

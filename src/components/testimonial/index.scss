@@ -1,0 +1,35 @@
+.testimonial {
+    @apply container px-4 mt-16;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+    @apply lg:gap-10 lg:mt-24;
+    &__card {
+        @apply flex flex-col justify-between;
+    }
+    &__text {
+        @apply text-[28px] leading-10 font-medium relative;
+        &::before {
+            content: open-quote;
+            @apply absolute -translate-x-full;
+        }
+        &::after {
+            content: close-quote;
+        }
+    }
+    &__author {
+        @apply mt-8 flex items-center gap-4;
+        @apply text-xl;
+        &-name {
+            @apply bg-work bg-size-full bg-left-bottom bg-no-repeat;     
+            @apply hover:bg-none;
+        }
+        &-title {
+            @apply text-secondary-100 mt-1;
+        }
+    }
+    &__figure {
+        @apply w-16 h-16 rounded-full overflow-hidden;
+    }
+    &__author-bio {
+        @apply flex flex-col items-start;
+    }
+}

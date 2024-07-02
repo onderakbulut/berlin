@@ -1,0 +1,24 @@
+.blog {
+    @apply my-16;
+    @apply lg:my-24;
+    &__title {
+        @apply container px-4;
+        @apply mb-6 uppercase text-secondary-100 tracking-[1.6px];
+    }
+    &__card {
+        @apply block py-6 border-t border-secondary-200;
+        @apply hover:bg-light;
+    }
+    &__content {
+        @apply container px-4;
+        @apply flex flex-col justify-between gap-2;
+        @apply lg:flex-row lg:gap-12;
+        &-title {
+            @apply text-xl;
+        }
+        &-date {
+            @apply text-secondary-100;
+        }
+    }
+
+}

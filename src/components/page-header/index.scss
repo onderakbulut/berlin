@@ -1,0 +1,14 @@
+.page-header {
+    @apply container px-4 my-16;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+    @apply lg:gap-10 lg:my-24;
+    &__title {
+        h1 {
+            @apply text-3xl tracking-[-.5px] font-medium mb-2;
+            @apply lg:text-5xl;
+        }
+    }
+    &__subTitle {
+        @apply text-[28px] leading-10;
+    }
+}

@@ -1,0 +1,69 @@
+.header {
+    @apply flex items-center justify-between py-6;
+    @apply lg:py-8 px-4;
+
+    &__menu {
+        @apply max-lg:absolute max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:h-full max-lg:bg-white;
+        @apply max-lg:flex-col max-lg:px-6 max-lg:py-8;
+        @apply max-lg:hidden;
+        @apply flex gap-x-4;
+        @apply transition-all duration-300 ease-in-out;
+        @apply z-[1];
+
+        &:not(.-is-active) {
+            @apply max-lg:invisible max-lg:opacity-0 max-lg:scale-95;
+        }
+
+        &-item {
+            @apply p-1;
+            @apply lg:text-xl;
+        }
+        &-link {
+            @apply flex items-center;
+            &.active,
+            &:hover {
+                @apply bg-work bg-size-full bg-left-bottom bg-no-repeat;     
+            }
+            &.active {
+                @apply hover:bg-none;
+            }
+        }
+    }
+}
+
+.btn-toggle {
+    @apply text-3xl relative z-[2];
+    @apply lg:hidden;
+    & > svg:last-of-type {
+        @apply hidden;
+    }
+    &.-is-active > svg:first-of-type {
+        @apply hidden;
+    }
+    &.-is-active > svg:last-of-type {
+        @apply block;
+    }
+}
+
+.dropdown {
+    @apply relative;
+    &:hover .dropdown-menu {
+        @apply block;
+    }
+}
+
+.dropdown-menu {
+    @apply hidden absolute min-w-[160px] text-sm bg-white shadow-md px-0 py-[5px] left-0 top-full;
+    li {
+        @apply block text-[#333] whitespace-nowrap hover:bg-neutral-100;
+
+        & > a {
+            @apply block px-5 py-2;
+        }
+    }
+    &__link {
+        @apply lg:text-lg;
+    }
+}
+
+

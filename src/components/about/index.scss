@@ -1,0 +1,19 @@
+.about {
+    $self: &;
+    @apply container;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 my-16;
+    @apply lg:gap-10 lg:my-24;
+    &__heading {
+        @apply text-5xl leading-[-.5px] font-medium mb-8;
+    }
+    
+    p {
+        @apply mb-8 text-xl;
+        &#{$self}__subheading {
+            @apply text-[28px] leading-10;
+        }
+    }
+    &__banner {
+        @apply sticky top-24;
+    }
+}

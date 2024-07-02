@@ -1,0 +1,40 @@
+.work {
+    @apply container px-4 mb-24;
+    &__title {
+        @apply uppercase text-secondary-100 mb-6;
+    }
+    &__content {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+        @apply lg:gap-10;
+        $self: &;
+        &-item {
+            @apply relative;
+            &:hover {
+                #{$self}-media {
+                    @apply opacity-80;
+                }
+            }
+        }
+        &-media {
+            @apply relative mb-5 aspect-[3/2] transition-opacity duration-200 ease-linear;
+            img {
+                @apply absolute w-full h-full object-cover;
+            }
+        }
+        &-title {
+            @apply text-xl font-medium;
+            a::after {
+                @apply content-[''] absolute left-0 top-0 right-0 bottom-0 z-[1];
+            }
+        }
+        &-tags {
+            @apply text-secondary-100;
+            a {
+                @apply relative z-[2];
+                &:hover {
+                    @apply bg-work bg-size-full bg-left-bottom bg-no-repeat;     
+                }
+            }
+        }
+    }
+}
